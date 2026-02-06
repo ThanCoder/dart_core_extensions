@@ -23,7 +23,9 @@ extension StringPathExtensions on String {
   }
 
   String get extName {
-    return split(Platform.pathSeparator).last;
+    final list = split('.');
+    if (list.isEmpty) return this;
+    return list.last;
   }
 
   String pathJoin(String name) {

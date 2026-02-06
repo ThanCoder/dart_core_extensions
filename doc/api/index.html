@@ -44,7 +44,85 @@
       
 <section class="desc markdown">
   <h1 id="dart-core-extensions">Dart Core Extensions</h1>
-<h2 id="for-testing">For Testing</h2>
+<h2 id="map">Map</h2>
+<pre class="language-dart"><code class="language-dart">final map = {
+    'name': 'than',
+    'sub': {'name': 'subname'},
+    'list': ['one', 'two', 'three'],
+    'int_list': [1,2,3,4],
+    'd_list':[1.1,2.2,5.2,5.5]
+    };
+
+print(map.get&lt;String&gt;(['key'], def: 'default')); //type T
+
+print(map.getString(['name'], def: 'default value'));
+
+print(map.getBool(['keys'])); //false
+print(map.getBool(['keys'], def: true)); //true
+
+print(map.getList&lt;String&gt;(['keys'], def: ['one', 'two'])); // type T
+
+print(map.getStringList(['list'])); //[one, two, three]
+print(map.getIntList(['int_list'])); //[1, 2, 3, 4]
+print(map.getDoubleList(['d_list'])); //[1.1, 2.2, 5.2, 5.5]
+</code></pre>
+<h2 id="string">String</h2>
+<pre class="language-dart"><code class="language-dart">final name = 'thancoder';
+print(name.toCaptalize); //Thancoder
+print(name.toCaptalizeWords()); //Thancoder
+
+final name = 'than coder';
+print(name.toCaptalizeWords());//Than Coder
+
+final name = 'than-coder';
+print(name.toCaptalizeWords(splitKey: '-'));//Than-Coder
+
+// path
+final name = 'file.png';
+print(name.getName()); //file.png
+print(name.getName(withExt: false)); //file
+print(name.extName); //png
+
+
+</code></pre>
+<h2 id="datetime">DateTime</h2>
+<pre class="language-dart"><code class="language-dart">
+final date = DateTime.now().subtract(Duration(hours: 1, days: 2));
+
+print('timeago: ${date.timeAgo()}');//timeago: 2d ago
+print('timeago fullText: ${date.timeAgoFull()}');//timeago fullText: 2 days ago
+print('relative: ${date.relativeTime()}');//relative: 2d ago
+print('format time: ${date.formatTime(showSeconds: true)}'); //format time: 07:32:01 PM
+</code></pre>
+<h2 id="duration">Duration</h2>
+<pre class="language-dart"><code class="language-dart">final duration = Duration();
+
+print(duration.autoTimeLabel());
+print(duration.calculateEta(0.5)); //progress: 0.0 ~ 1.0
+</code></pre>
+<h2 id="file">File</h2>
+<pre class="language-dart"><code class="language-dart">final file = File('');
+
+print(file.getName());
+print(file.extName);
+print(file.parentPath);
+print(file.isDirectory);
+print(file.isFile);
+print(file.size);
+print(file.modified);
+print(file.sizeAsync());
+print(file.modifiedAsync());
+print(file.fileSizeLabel());
+</code></pre>
+<h2 id="path">Path</h2>
+<pre class="language-dart"><code class="language-dart">final path = '/home/////than///thancoder//';
+
+print(path.getName());
+print(path.extName);
+print(path.toCaptalize());
+print(path.getNormalizeSlash);
+print(path.getCleanBackSlash);
+</code></pre>
 </section>
 
 
@@ -85,7 +163,7 @@
 <footer>
   <span class="no-break">
     dart_core_extensions
-      0.0.1
+      0.1.1
   </span>
   
 </footer>

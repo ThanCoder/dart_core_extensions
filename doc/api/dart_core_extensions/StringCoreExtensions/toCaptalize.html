@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the toCaptalize method from the StringCoreExtensions extension, for the Dart programming language.">
-  <title>toCaptalize method - StringCoreExtensions extension - dart_core_extensions library - Dart API</title>
+  <meta name="description" content="API docs for the toCaptalize property from the StringCoreExtensions extension, for the Dart programming language.">
+  <title>toCaptalize property - StringCoreExtensions extension - dart_core_extensions library - Dart API</title>
 
 
   
@@ -27,7 +27,7 @@
     <li><a href="../../index.html">dart_core_extensions</a></li>
     <li><a href="../../dart_core_extensions/">dart_core_extensions.dart</a></li>
     <li><a href="../../dart_core_extensions/StringCoreExtensions.html">StringCoreExtensions</a></li>
-    <li class="self-crumb">toCaptalize method</li>
+    <li class="self-crumb">toCaptalize property</li>
   </ol>
   <div class="self-name">toCaptalize</div>
   <form class="search navbar-right" role="search">
@@ -49,33 +49,39 @@
     data-above-sidebar="dart_core_extensions&#47;StringCoreExtensions-extension-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-method">toCaptalize</span> method 
+<h1><span class="kind-property">toCaptalize</span> property 
 </h1></div>
 
+    
+
+    
+        
+  <section id="getter">
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
-<span class="name ">toCaptalize</span>(<wbr>)
-
+      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+      get
+      <span class="name ">toCaptalize</span>
       
 
     </section>
     
 
-
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">String toCaptalize() {
-  if (isEmpty) return this;
+  <pre class="language-dart"><code class="language-dart">String get toCaptalize {
+  if (trim().isEmpty) return this;
   return &#39;${this[0].toUpperCase()}${substring(1, length)}&#39;;
 }</code></pre>
 </section>
 
+  </section>
 
-  </div> <!-- /.main-content -->
-  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+
+</div> <!-- /.main-content -->
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
@@ -85,19 +91,19 @@
     <li><a href="../../index.html">dart_core_extensions</a></li>
     <li><a href="../../dart_core_extensions/">dart_core_extensions</a></li>
     <li><a href="../../dart_core_extensions/StringCoreExtensions.html">StringCoreExtensions</a></li>
-    <li class="self-crumb">toCaptalize method</li>
+    <li class="self-crumb">toCaptalize property</li>
 </ol>
 
-    <h5>StringCoreExtensions extension on <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></h5>
-    <div id="dartdoc-sidebar-left-content"></div>
-  </div><!--/.sidebar-offcanvas-->
-  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  <h5>StringCoreExtensions extension on <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div><!--/.sidebar-offcanvas-->
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
 </main>
 <footer>
   <span class="no-break">
     dart_core_extensions
-      0.0.1
+      0.1.1
   </span>
   
 </footer>

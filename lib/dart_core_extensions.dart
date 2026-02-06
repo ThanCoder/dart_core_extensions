@@ -12,3 +12,4 @@ export 'src/file_system_entity_core_extensions.dart';
 export 'src/int_size_label_extension.dart';
 export 'src/string_core_extensions.dart';
 export 'src/string_path_extensions.dart';
+export 'src/map_core_extensions.dart';

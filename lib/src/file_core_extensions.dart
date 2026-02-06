@@ -11,6 +11,8 @@ extension FileCoreExtensions on File {
     return path.extName;
   }
 
+  String get parentPath => parent.path;
+
   bool get isDirectory {
     return statSync().type == FileSystemEntityType.directory;
   }

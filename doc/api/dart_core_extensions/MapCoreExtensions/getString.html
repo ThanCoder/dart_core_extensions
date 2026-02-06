@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the extName property from the StringPathExtensions extension, for the Dart programming language.">
-  <title>extName property - StringPathExtensions extension - dart_core_extensions library - Dart API</title>
+  <meta name="description" content="API docs for the getString method from the MapCoreExtensions extension, for the Dart programming language.">
+  <title>getString method - MapCoreExtensions extension - dart_core_extensions library - Dart API</title>
 
 
   
@@ -26,10 +26,10 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">dart_core_extensions</a></li>
     <li><a href="../../dart_core_extensions/">dart_core_extensions.dart</a></li>
-    <li><a href="../../dart_core_extensions/StringPathExtensions.html">StringPathExtensions</a></li>
-    <li class="self-crumb">extName property</li>
+    <li><a href="../../dart_core_extensions/MapCoreExtensions.html">MapCoreExtensions</a></li>
+    <li class="self-crumb">getString method</li>
   </ol>
-  <div class="self-name">extName</div>
+  <div class="self-name">getString</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -46,43 +46,37 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="dart_core_extensions&#47;StringPathExtensions-extension-sidebar.html"
+    data-above-sidebar="dart_core_extensions&#47;MapCoreExtensions-extension-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-property">extName</span> property 
+<h1><span class="kind-method">getString</span> method 
 </h1></div>
 
-    
-
-    
-        
-  <section id="getter">
     <section class="multi-line-signature">
       
-      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
-      get
-      <span class="name ">extName</span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+<span class="name ">getString</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="getString-param-keys"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">keys</span>, {</span></li>
+<li><span class="parameter" id="getString-param-def"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">def</span> = <span class="default-value">&#39;&#39;</span>, </span></li>
+</ol>})
+
       
 
     </section>
     
 
+
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">String get extName {
-  final list = split(&#39;.&#39;);
-  if (list.isEmpty) return this;
-  return list.last;
+  <pre class="language-dart"><code class="language-dart">String getString(List&lt;String&gt; keys, {String def = &#39;&#39;}) {
+  return get&lt;String&gt;(keys, def: def);
 }</code></pre>
 </section>
 
-  </section>
 
-
-</div> <!-- /.main-content -->
-<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
@@ -91,14 +85,14 @@
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">dart_core_extensions</a></li>
     <li><a href="../../dart_core_extensions/">dart_core_extensions</a></li>
-    <li><a href="../../dart_core_extensions/StringPathExtensions.html">StringPathExtensions</a></li>
-    <li class="self-crumb">extName property</li>
+    <li><a href="../../dart_core_extensions/MapCoreExtensions.html">MapCoreExtensions</a></li>
+    <li class="self-crumb">getString method</li>
 </ol>
 
-  <h5>StringPathExtensions extension on <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></h5>
-  <div id="dartdoc-sidebar-left-content"></div>
-</div><!--/.sidebar-offcanvas-->
-<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>MapCoreExtensions extension on <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a></h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
 </main>
 <footer>
