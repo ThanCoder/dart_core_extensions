@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:dart_core_extensions/src/string_path_extensions.dart';
+import 'package:dart_core_extensions/src/path_core_extensions.dart';
 
 extension FileSystemEntityCoreExtensions on FileSystemEntity {
   String getName({bool withExt = true}) {
@@ -20,8 +20,10 @@ extension FileSystemEntityCoreExtensions on FileSystemEntity {
   }
 
   Directory get getDirectory => Directory(path);
+  Directory get directory => Directory(path);
 
   File get getFile => File(path);
+  File get file => File(path);
 
   int get size {
     return statSync().size;

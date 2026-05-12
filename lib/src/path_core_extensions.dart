@@ -1,6 +1,6 @@
 import 'dart:io';
 
-extension StringPathExtensions on String {
+extension PathCoreExtensions on String {
   String get getNormalizeSlash => replaceAll(RegExp(r'/+'), '/');
 
   String get getCleanBackSlash {
@@ -30,5 +30,9 @@ extension StringPathExtensions on String {
 
   String pathJoin(String name) {
     return '$getCleanBackSlash${Platform.pathSeparator}$name';
+  }
+
+  String join(String path) {
+    return '$getCleanBackSlash${Platform.pathSeparator}$path';
   }
 }

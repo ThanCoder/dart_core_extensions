@@ -60,4 +60,25 @@ extension MapCoreExtensions on Map {
     }
     return def;
   }
+
+  ///
+  /// ### Get Map List
+  ///
+  List<Map<String, dynamic>> getMapList(String key) {
+    final value = this[key];
+    if (value == null) return [];
+    if (value is List<dynamic>) {
+      try {
+        return List<Map<String, dynamic>>.from(value);
+      } catch (e) {
+        print('[getMapList]: $e');
+      }
+    }
+    // print(value.runtimeType);
+    return [];
+  }
+
+  Future<void> putMapList(String key, List<Map<String, dynamic>> value) async {
+    this[key] = value;
+  }
 }

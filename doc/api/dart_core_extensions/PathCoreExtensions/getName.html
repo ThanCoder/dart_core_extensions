@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the size property from the FileCoreExtensions extension, for the Dart programming language.">
-  <title>size property - FileCoreExtensions extension - dart_core_extensions library - Dart API</title>
+  <meta name="description" content="API docs for the getName method from the PathCoreExtensions extension, for the Dart programming language.">
+  <title>getName method - PathCoreExtensions extension - dart_core_extensions library - Dart API</title>
 
 
   
@@ -26,10 +26,10 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">dart_core_extensions</a></li>
     <li><a href="../../dart_core_extensions/">dart_core_extensions.dart</a></li>
-    <li><a href="../../dart_core_extensions/FileCoreExtensions.html">FileCoreExtensions</a></li>
-    <li class="self-crumb">size property</li>
+    <li><a href="../../dart_core_extensions/PathCoreExtensions.html">PathCoreExtensions</a></li>
+    <li class="self-crumb">getName method</li>
   </ol>
-  <div class="self-name">size</div>
+  <div class="self-name">getName</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -46,41 +46,46 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="dart_core_extensions&#47;FileCoreExtensions-extension-sidebar.html"
+    data-above-sidebar="dart_core_extensions&#47;PathCoreExtensions-extension-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-property">size</span> property 
+<h1><span class="kind-method">getName</span> method 
 </h1></div>
 
-    
-
-    
-        
-  <section id="getter">
     <section class="multi-line-signature">
       
-      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
-      get
-      <span class="name ">size</span>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+<span class="name ">getName</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="getName-param-withExt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">withExt</span> = <span class="default-value">true</span>, </span></li>
+</ol>})
+
       
 
     </section>
     
 
+
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">int get size {
-  return statSync().size;
+  <pre class="language-dart"><code class="language-dart">String getName({bool withExt = true}) {
+  &#47;&#47; replace &#47;&#47; -&gt; &#47;
+  final oneSlash = getNormalizeSlash;
+  &#47;&#47; clean end -&gt; &#47;
+  final cleanedPath = oneSlash.endsWith(&#39;&#47;&#39;)
+      ? oneSlash.substring(0, oneSlash.length - 1)
+      : oneSlash;
+  final name = cleanedPath.split(Platform.pathSeparator).last;
+  if (!withExt) {
+    return name.split(&#39;.&#39;).first;
+  }
+  return name;
 }</code></pre>
 </section>
 
-  </section>
 
-
-</div> <!-- /.main-content -->
-<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
@@ -89,14 +94,14 @@
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">dart_core_extensions</a></li>
     <li><a href="../../dart_core_extensions/">dart_core_extensions</a></li>
-    <li><a href="../../dart_core_extensions/FileCoreExtensions.html">FileCoreExtensions</a></li>
-    <li class="self-crumb">size property</li>
+    <li><a href="../../dart_core_extensions/PathCoreExtensions.html">PathCoreExtensions</a></li>
+    <li class="self-crumb">getName method</li>
 </ol>
 
-  <h5>FileCoreExtensions extension on <a href="https://api.flutter.dev/flutter/dart-io/File-class.html">File</a></h5>
-  <div id="dartdoc-sidebar-left-content"></div>
-</div><!--/.sidebar-offcanvas-->
-<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>PathCoreExtensions extension on <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
 </main>
 <footer>
