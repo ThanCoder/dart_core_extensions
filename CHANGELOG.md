@@ -1,4 +1,8 @@
-# 0.3.0
+# 0.4.0
+
+- Added `DateTimeTimeagoExtension.formatTimeAgo`
+
+## 0.3.0
 
 - Added `DateTime.calculateAge`
 - Added `DateTime.calculateDetailedAge`
