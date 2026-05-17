@@ -20,11 +20,13 @@ extension FileSystemEntityCoreExtensions on FileSystemEntity {
   }
 
   Directory get getDirectory => Directory(path);
+
   Directory get directory => Directory(path);
 
   File get getFile => File(path);
   File get file => File(path);
 
+  /// The size of the file system object.
   int get size {
     return statSync().size;
   }
@@ -33,8 +35,33 @@ extension FileSystemEntityCoreExtensions on FileSystemEntity {
     return (await stat()).size;
   }
 
-  DateTime get modified {
+  /// The time of the last change to the data of the file system object.
+  DateTime get modifiedDate {
     return statSync().modified;
+  }
+
+  /// The time of the last access to the data of the file system object.
+  ///
+  /// On Windows platforms, this may have 1 day granularity, and be
+  /// out of date by an hour.
+  DateTime get accessedDate {
+    return statSync().accessed;
+  }
+
+  /// The time of the last change to the data or metadata of the file system
+  /// object.
+  ///
+  /// On Windows platforms, this is instead the file creation time.
+  DateTime get changedDate {
+    return statSync().changed;
+  }
+
+  /// The mode of the file system object.
+  ///
+  /// Permissions are encoded in the lower 16 bits of this number, and can be
+  /// decoded using the [modeString] getter.
+  int get mode {
+    return statSync().mode;
   }
 
   Future<DateTime> modifiedAsync() async {
