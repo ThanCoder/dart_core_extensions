@@ -46,6 +46,7 @@ extension MapCoreExtensions on Map {
     return def;
   }
 
+  /// get `[<T>]`
   T get<T>(List<String> keys, {required T def}) {
     dynamic current = this;
     for (var key in keys) {
@@ -78,6 +79,7 @@ extension MapCoreExtensions on Map {
     return [];
   }
 
+  /// put map
   Future<void> putMapList(String key, List<Map<String, dynamic>> value) async {
     this[key] = value;
   }

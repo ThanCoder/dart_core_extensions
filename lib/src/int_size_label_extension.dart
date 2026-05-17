@@ -4,4 +4,8 @@ extension IntSizeLabelExtension on int {
   String fileSizeLabel({int asFixed = 2}) {
     return toDouble().fileSizeLabel(asFixed: asFixed);
   }
+
+  String toFileSizeLabel({int asFixed = 2}) {
+    return toDouble().fileSizeLabel(asFixed: asFixed);
+  }
 }

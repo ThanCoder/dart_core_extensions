@@ -1,5 +1,5 @@
 extension DateTimeTimeagoExtension on DateTime {
-  String timeAgo({
+  String toTimeAgo({
     String justNow = 'just now',
     String secondsAgo = 's ago',
     String minutesAgo = 'm ago',
@@ -28,7 +28,7 @@ extension DateTimeTimeagoExtension on DateTime {
     return '${diff.inDays}$daysAgo';
   }
 
-  String timeAgoFull() {
+  String toTimeAgoFull() {
     final diff = DateTime.now().difference(this);
 
     if (diff.inSeconds < 5) return 'just now';
@@ -47,7 +47,7 @@ extension DateTimeTimeagoExtension on DateTime {
     return '${diff.inDays} days ago';
   }
 
-  String relativeTime() {
+  String toRelativeTime() {
     final now = DateTime.now();
     final diff = difference(now);
 

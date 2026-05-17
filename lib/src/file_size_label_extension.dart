@@ -6,4 +6,8 @@ extension FileSizeLabelExtension on File {
   String fileSizeLabel({int asFixed = 2}) {
     return statSync().size.toDouble().fileSizeLabel(asFixed: asFixed);
   }
+
+  String toFileSizeLabel({int asFixed = 2}) {
+    return statSync().size.toDouble().fileSizeLabel(asFixed: asFixed);
+  }
 }
