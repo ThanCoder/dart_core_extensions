@@ -1,3 +1,5 @@
+// ignore_for_file: public_member_api_docs
+
 import 'dart:io';
 
 import 'package:dart_core_extensions/src/double_size_label_extension.dart';

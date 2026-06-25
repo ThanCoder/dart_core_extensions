@@ -4,6 +4,9 @@ import 'package:dart_core_extensions/dart_core_extensions.dart';
 
 /// file entity special class
 extension FileSystemEntityCoreExtensions on FileSystemEntity {
+  ///### without ext
+  String get onlyName => path.getName(withExt: false);
+
   /// file name
   String getName({bool withExt = true}) {
     return path.getName(withExt: withExt);
@@ -80,6 +83,7 @@ extension FileSystemEntityCoreExtensions on FileSystemEntity {
     return statSync().mode;
   }
 
+  ///modifiedAsync
   Future<DateTime> modifiedAsync() async {
     return (await stat()).modified;
   }

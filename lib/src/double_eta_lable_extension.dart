@@ -1,3 +1,5 @@
+// ignore_for_file: public_member_api_docs
+
 extension DoubleEtaLableExtension on double {
   String formatautoSpeedLabel() {
     if (this == 0) {

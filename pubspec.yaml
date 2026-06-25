@@ -1,13 +1,13 @@
 name: dart_core_extensions
 description: General purpose Dart extensions for file, io, size, label, string, and number utilities.
-version: 0.3.0
+version: 0.4.0
 repository: https://github.com/ThanCoder/dart_core_extensions.git
 
 environment:
   sdk: ^3.10.1
 
 # Add regular dependencies here.
-dependencies:
+# dependencies:
   # path: ^1.9.0
 
 dev_dependencies:

@@ -1,4 +1,8 @@
-# 0.4.0
+# 0.5.0
+
+- Updated `Just Update`
+
+## 0.4.0
 
 - Added `DateTimeTimeagoExtension.formatTimeAgo`
 

@@ -1,3 +1,5 @@
+// ignore_for_file: public_member_api_docs
+
 import 'dart:io';
 
 extension PathCoreExtensions on String {
@@ -9,6 +11,9 @@ extension PathCoreExtensions on String {
     final cleanedPath = endsWith('/') ? substring(0, length - 1) : this;
     return cleanedPath;
   }
+
+  /// Only Name and without .ext
+  String get onlyName => getName(withExt: false);
 
   String getName({bool withExt = true}) {
     // replace // -> /

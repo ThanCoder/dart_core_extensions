@@ -1,3 +1,5 @@
+// ignore_for_file: public_member_api_docs
+
 extension StringCoreExtensions on String {
   String get toCaptalize {
     if (trim().isEmpty) return this;

@@ -1,6 +1,11 @@
 ///format time
 extension DateTimeTimeagoExtension on DateTime {
-  /// auto time label
+  /// ### Format Date && Time Lable
+  String formatDateTimeAgo() => formatTimeAgo();
+
+  ///
+  /// ### auto date && time label
+  ///
   String formatTimeAgo() {
     final now = DateTime.now();
     final difference = now.difference(this);

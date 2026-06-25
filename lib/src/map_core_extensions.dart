@@ -1,3 +1,5 @@
+// ignore_for_file: public_member_api_docs
+
 extension MapCoreExtensions on Map {
   String getString(List<String> keys, {String def = ''}) {
     return get<String>(keys, def: def);
